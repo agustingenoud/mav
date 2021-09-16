@@ -7,6 +7,10 @@ const tiempo_ref = document.querySelector("#sel_tiempo_id");
 const btn_agregar = document.querySelector("#btn_agregar_id");
 const planilla = document.querySelector(".planilla");
 
+const formatNumber = (num) => {
+  return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+};
+
 for (let item of btns) {
   item.addEventListener("click", async () => {
     console.log(`Apretaste el botón: ${item.innerHTML}`);
@@ -75,7 +79,7 @@ for (let item of btns) {
         tiempo: tiempo_ref.value,
         salario: Number(
           salario.replace(/[\,]/g, (m) => {
-            return m == "," ? "." : ".";
+            return m == "," ? "" : "";
           })
         ),
       };
@@ -83,16 +87,20 @@ for (let item of btns) {
 
       const itemPlanilla = document.createElement("tr");
       itemPlanilla.className = "seconds";
-      itemPlanilla.innerHTML = `<td class="td-uno">${linea_contrato.asignacion}</td>
+      itemPlanilla.innerHTML = `<td class="td-uno">${
+        linea_contrato.asignacion
+      }</td>
                                 <td class="td-dos">${linea_contrato.tiempo}</td>
-                                <td class="td-tres">${linea_contrato.salario}</td>`;
+                                <td class="td-tres">${formatNumber(
+                                  linea_contrato.salario
+                                )}</td>`;
       planilla.appendChild(itemPlanilla);
 
       num = linea_contrato.salario;
       totalItems += num;
-      document.querySelector("#total").innerHTML = `Total: ${parseFloat(
+      document.querySelector("#total").innerHTML = `Total: ${formatNumber(
         totalItems
-      ).toFixed(2)}`;
+      )}`;
     });
   }); // Fin item.addEventListener
 } // Fin for(let item of btns)
