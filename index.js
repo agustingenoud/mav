@@ -4,6 +4,7 @@ const express = require("express");
 const { google } = require("googleapis");
 var helmet = require("helmet");
 var compression = require("compression");
+require("dotenv").config();
 
 const app = express();
 
@@ -16,7 +17,6 @@ app.listen(3000, () => console.log("listenin at 3000-tremil"));
 app.use(express.static("public")); // public folder to serve
 app.use(helmet());
 app.use(compression());
-
 app.use(
   express.json({
     limit: "1mb",
@@ -45,7 +45,7 @@ app.post("/api", async (request, response) => {
     version: "v4",
     auth: client,
   });
-  const spreadsheetId = "1ZRU1TZ7rCGvHQxzRA6xRlzFCXZqsM8BKySNLgH95JYM";
+  const spreadsheetId = process.env.API_KEY;
   let getRows = "";
 
   switch (in_btn) {
