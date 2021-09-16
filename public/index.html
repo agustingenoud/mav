@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <title>EXPRESS-SHIFFman</title>
+</head>
+
+<body>
+    <main>
+        <ul class="container-cotizador">
+            <li id="r-uno">
+                <button class="rubro" id="tv">TV</button>
+                <button class="rubro" id="cine">Cine</button>
+                <button class="rubro" id="publi">Publicidad</button>
+            </li>
+            <li id="r-dos">
+                <select name="sel_produccion" id="sel_produccion_id">
+                    <option>Largometraje Nacional</option>
+                    <option>Cortos</option>
+                    <option>Documental</option>
+                    <option>Coproduccion de Largometrajes Internacionales</option>
+                    <option>Animacion</option>
+                </select>
+            </li>
+            <li id="r-tres">
+                <select name="sel_cont" id="sel_cont_id">
+                    <option>Actores</option>
+                    <option>Equipo Tecnico</option>
+                    <option>Mensualizados</option>
+                </select>
+            </li>
+            <li id="r-cuatro">
+                <select name="sel_asignacion" id="sel_asignacion_id"></select>
+            </li>
+            <li id="r-cinco-a">
+                <select name="sel_tiempo" id="sel_tiempo_id"></select>
+            </li>
+            <li id="r-cinco-b">
+                <button id="btn_agregar_id">Agregar</button>
+            </li>
+            <li id="total">Total: </li>
+        </ul>
+
+        <table class="planilla">
+            <thead>
+                <tr class="first">
+                    <th class="td-uno">Asignacion</td>
+                    <th class="td-dos">Tipo de contratación</td>
+                    <th class="td-tres">Costo</td>
+                </tr>
+            </thead>
+        </table>
+
+    </main>
+    <script src="sketch.js"></script>
+</body>
+
+</html>

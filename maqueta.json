@@ -1,0 +1,182 @@
+[
+  {
+    "Asignacion / Funcion": "Actor - Unitario",
+    "Tipo de contratacion": "Por 15 min",
+    "Base de busqueda": "Actor - UnitarioPor 15 min",
+    "Bruto Remunerativo": "1,924",
+    "Contribucion patronal": "20.4%",
+    "Aporte sindical": "2.5%",
+    "ART": "0.0%",
+    "SAC": "8.3%"
+  },
+  {
+    "Asignacion / Funcion": "Actor - Tira",
+    "Tipo de contratacion": "Por 15 min",
+    "Base de busqueda": "Actor - TiraPor 15 min",
+    "Bruto Remunerativo": "2,725",
+    "Contribucion patronal": "20.4%",
+    "Aporte sindical": "2.5%",
+    "ART": "0.0%",
+    "SAC": "8.3%"
+  },
+  {
+    "Asignacion / Funcion": "Actor - Unitario",
+    "Tipo de contratacion": "Por 30 min",
+    "Base de busqueda": "Actor - UnitarioPor 30 min",
+    "Bruto Remunerativo": "3,328",
+    "Contribucion patronal": "20.4%",
+    "Aporte sindical": "2.5%",
+    "ART": "0.0%",
+    "SAC": "8.3%"
+  },
+  {
+    "Asignacion / Funcion": "Actor - Tira",
+    "Tipo de contratacion": "Por 30 min",
+    "Base de busqueda": "Actor - TiraPor 30 min",
+    "Bruto Remunerativo": "3,168",
+    "Contribucion patronal": "20.4%",
+    "Aporte sindical": "2.5%",
+    "ART": "0.0%",
+    "SAC": "8.3%"
+  },
+  {
+    "Asignacion / Funcion": "Actor - Unitario",
+    "Tipo de contratacion": "Por 60 min",
+    "Base de busqueda": "Actor - UnitarioPor 60 min",
+    "Bruto Remunerativo": "7,784",
+    "Contribucion patronal": "20.4%",
+    "Aporte sindical": "2.5%",
+    "ART": "0.0%",
+    "SAC": "8.3%"
+  },
+  {
+    "Asignacion / Funcion": "Actor - Tira",
+    "Tipo de contratacion": "Por 60 min",
+    "Base de busqueda": "Actor - TiraPor 60 min",
+    "Bruto Remunerativo": "5,196",
+    "Contribucion patronal": "20.4%",
+    "Aporte sindical": "2.5%",
+    "ART": "0.0%",
+    "SAC": "8.3%"
+  },
+  {
+    "Asignacion / Funcion": "Actor - Unitario",
+    "Tipo de contratacion": "Por mes",
+    "Base de busqueda": "Actor - UnitarioPor mes",
+    "Bruto Remunerativo": "132,022",
+    "Contribucion patronal": "20.4%",
+    "Aporte sindical": "2.5%",
+    "ART": "0.0%",
+    "SAC": "8.3%"
+  },
+  {
+    "Asignacion / Funcion": "Actor - Tira",
+    "Tipo de contratacion": "Por mes",
+    "Base de busqueda": "Actor - TiraPor mes",
+    "Bruto Remunerativo": "118,839",
+    "Contribucion patronal": "20.4%",
+    "Aporte sindical": "2.5%",
+    "ART": "0.0%",
+    "SAC": "8.3%"
+  },
+  {
+    "Asignacion / Funcion": "Actor - Unitario",
+    "Tipo de contratacion": "Por 90 min",
+    "Base de busqueda": "Actor - UnitarioPor 90 min",
+    "Bruto Remunerativo": "8,694",
+    "Contribucion patronal": "20.4%",
+    "Aporte sindical": "2.5%",
+    "ART": "0.0%",
+    "SAC": "8.3%"
+  },
+  {
+    "Asignacion / Funcion": "Actor - Unitario",
+    "Tipo de contratacion": "Por 120 min",
+    "Base de busqueda": "Actor - UnitarioPor 120 min",
+    "Bruto Remunerativo": "9,752",
+    "Contribucion patronal": "20.4%",
+    "Aporte sindical": "2.5%",
+    "ART": "0.0%",
+    "SAC": "8.3%"
+  },
+  {
+    "Asignacion / Funcion": "Actor - Unitario",
+    "Tipo de contratacion": "Especial",
+    "Base de busqueda": "Actor - UnitarioEspecial",
+    "Bruto Remunerativo": "14,089",
+    "Contribucion patronal": "20.4%",
+    "Aporte sindical": "2.5%",
+    "ART": "0.0%",
+    "SAC": "8.3%"
+  },
+  {
+    "Asignacion / Funcion": "Director puesta en escena - Unitario",
+    "Tipo de contratacion": "Por 60 min",
+    "Base de busqueda": "Director puesta en escena - UnitarioPor 60 min",
+    "Bruto Remunerativo": "8,816",
+    "Contribucion patronal": "20.4%",
+    "Aporte sindical": "2.5%",
+    "ART": "0.0%",
+    "SAC": "8.3%"
+  },
+  {
+    "Asignacion / Funcion": "Director puesta en escena - Unitario",
+    "Tipo de contratacion": "Por 90 min",
+    "Base de busqueda": "Director puesta en escena - UnitarioPor 90 min",
+    "Bruto Remunerativo": "10,458",
+    "Contribucion patronal": "20.4%",
+    "Aporte sindical": "2.5%",
+    "ART": "0.0%",
+    "SAC": "8.3%"
+  },
+  {
+    "Asignacion / Funcion": "Director puesta en escena - Unitario",
+    "Tipo de contratacion": "Por 120 min",
+    "Base de busqueda": "Director puesta en escena - UnitarioPor 120 min",
+    "Bruto Remunerativo": "12,055",
+    "Contribucion patronal": "20.4%",
+    "Aporte sindical": "2.5%",
+    "ART": "0.0%",
+    "SAC": "8.3%"
+  },
+  {
+    "Asignacion / Funcion": "Director puesta en escena - Tira",
+    "Tipo de contratacion": "Por 30 min",
+    "Base de busqueda": "Director puesta en escena - TiraPor 30 min",
+    "Bruto Remunerativo": "5,979",
+    "Contribucion patronal": "20.4%",
+    "Aporte sindical": "2.5%",
+    "ART": "0.0%",
+    "SAC": "8.3%"
+  },
+  {
+    "Asignacion / Funcion": "Director puesta en escena - Tira",
+    "Tipo de contratacion": "Por 60 min",
+    "Base de busqueda": "Director puesta en escena - TiraPor 60 min",
+    "Bruto Remunerativo": "7,475",
+    "Contribucion patronal": "20.4%",
+    "Aporte sindical": "2.5%",
+    "ART": "0.0%",
+    "SAC": "8.3%"
+  },
+  {
+    "Asignacion / Funcion": "Apuntador",
+    "Tipo de contratacion": "Por mes",
+    "Base de busqueda": "ApuntadorPor mes",
+    "Bruto Remunerativo": "118,839",
+    "Contribucion patronal": "20.4%",
+    "Aporte sindical": "2.5%",
+    "ART": "0.0%",
+    "SAC": "8.3%"
+  },
+  {
+    "Asignacion / Funcion": "Apuntador de reemplazo",
+    "Tipo de contratacion": "Por mes",
+    "Base de busqueda": "Apuntador de reemplazoPor mes",
+    "Bruto Remunerativo": "5,658",
+    "Contribucion patronal": "20.4%",
+    "Aporte sindical": "2.5%",
+    "ART": "0.0%",
+    "SAC": "8.3%"
+  }
+]
