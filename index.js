@@ -2,6 +2,8 @@
 
 const express = require("express");
 const { google } = require("googleapis");
+var helmet = require("helmet");
+var compression = require("compression");
 
 const app = express();
 
@@ -12,6 +14,9 @@ const auth = new google.auth.GoogleAuth({
 
 app.listen(3000, () => console.log("listenin at 3000-tremil"));
 app.use(express.static("public")); // public folder to serve
+app.use(helmet());
+app.use(compression());
+
 app.use(
   express.json({
     limit: "1mb",
