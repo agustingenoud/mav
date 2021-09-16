@@ -61,6 +61,7 @@ ul {
 .container-cotizador {
   width: 424px;
   max-height: 300px;
+  min-width: 384px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(5, fr);
@@ -68,7 +69,8 @@ ul {
 }
 
 .planilla {
-  width: 444px;
+  width: 600px;
+  min-width: 500px;
   padding-left: 20px;
   margin: 16px 0px;
   font-weight: lighter;
@@ -76,7 +78,7 @@ ul {
 
 .first {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: 3fr 2fr 1fr;
   row-gap: 12px;
   background-color: var(--rosa);
   color: var(--blanco);
@@ -92,7 +94,7 @@ thead {
 
 .seconds {
   display: grid;
-  grid-template-columns: 2fr 2fr 1fr;
+  grid-template-columns: 3fr 2fr 1fr;
   grid-template-rows: 40px;
   row-gap: 12px;
   background-color: var(--blanco);
