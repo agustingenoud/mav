@@ -12,8 +12,8 @@ const auth = new google.auth.GoogleAuth({
   keyFile: "credentials.json",
   scopes: "https://www.googleapis.com/auth/spreadsheets",
 });
-
-app.listen(3000, () => console.log("listenin at 3000-tremil"));
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log(` listenin at ${port}`));
 app.use(express.static("public")); // public folder to serve
 app.use(helmet());
 app.use(compression());
