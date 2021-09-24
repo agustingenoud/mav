@@ -136,7 +136,8 @@ cont_ref.addEventListener("click", async () => {
 
   //----------//
 
-  const input_json = await response.json(); // RECEIVE-api */
+  const input_json = await response.json(); // RECEIVE-apu */
+  console.log(input_json);
   received_cnv = input_json.data.values;
   console.log(received_cnv);
 
@@ -164,7 +165,7 @@ cont_ref.addEventListener("click", async () => {
   }
   sel_pos_cont = findPositions(received_cnv[1], asig_ref.value);
   console.log("_______sel_pos_cont------");
-  console.log(sel_pos_cont);
+  //console.log(sel_pos_cont);
 });
 
 asig_ref.addEventListener("click", async () => {
