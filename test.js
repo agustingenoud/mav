@@ -22,7 +22,17 @@ app.use(
     limit: "1mb",
   })
 );
-
+/* 
+app.get("/api", (request, response) => {
+  database.find({}, (err, data) => {
+    if (err) {
+      response.end();
+      return;
+    }
+    response.json(data);
+  });
+});
+ */
 // REQUEST API
 app.post("/api", async (request, response) => {
   const in_btn = request.body.btn;
@@ -35,11 +45,11 @@ app.post("/api", async (request, response) => {
     version: "v4",
     auth: client,
   });
-  const spreadsheetId = process.env.API_KEY;
+  const spreadsheetId = "1WvXJ3QsqBEpKVbWfPGKCwMjX34F4XD3UejaKDWvxAzU";
   let getRows = "";
 
   switch (in_btn) {
-    case "Television":
+    case "TV":
       console.log(`padentro del case 1: ${in_btn}`);
       getRows = await googleSheets.spreadsheets.values.get({
         auth,
@@ -54,7 +64,7 @@ app.post("/api", async (request, response) => {
       getRows = await googleSheets.spreadsheets.values.get({
         auth,
         spreadsheetId,
-        range: "Convenios!A:H",
+        range: "cine!A:H",
         majorDimension: "COLUMNS",
       });
       break;
@@ -63,7 +73,7 @@ app.post("/api", async (request, response) => {
       getRows = await googleSheets.spreadsheets.values.get({
         auth,
         spreadsheetId,
-        range: "Convenios!A:H",
+        range: "tv!A:H",
         majorDimension: "COLUMNS",
       });
       break;
@@ -78,37 +88,9 @@ app.post("/api", async (request, response) => {
       break;
   }
 
-  //console.log(getRows); // From switch
+  console.log(getRows); // From switch
   const data = getRows;
   // Fin --- googleapis
 
   response.json(data);
-});
-
-app.post("/apu", async (request, response) => {
-  const in_cnv = request.body.convenio;
-  console.log(` * CONCONCONCON * ${JSON.stringify(in_cnv)} `);
-
-  // googleapis--------------------------------
-  //create client instance for gAuth
-  const client = await auth.getClient();
-  const googleSheets = google.sheets({
-    version: "v4",
-    auth: client,
-  });
-  const spreadsheetId = process.env.API_KEY;
-  let getConvenios = "";
-
-  if (in_cnv != undefined) {
-    console.log(` * UUUUU * ${JSON.stringify(in_cnv)} `);
-    getConvenios = await googleSheets.spreadsheets.values.get({
-      auth,
-      spreadsheetId,
-      range: "Tabla de salarios!A:H",
-      majorDimension: "COLUMNS",
-    });
-    const srv_cnv = getConvenios;
-    console.log(srv_cnv);
-    response.json(srv_cnv);
-  }
 });
