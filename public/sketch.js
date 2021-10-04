@@ -33,6 +33,8 @@ for (let item of btns) {
     console.log(`Apretaste el botón: ${item.innerHTML}`);
     boton = item.innerHTML;
 
+    document.querySelector("#subtotal").innerText = `Subtotal $`;
+
     // Revisar borrar-todo cuándo aprieto botón
     const clean = () => {
       prod_ref.options.length = 0;
