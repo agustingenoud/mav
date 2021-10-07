@@ -11,6 +11,7 @@ const btn_agregar = document.querySelector("#btn_agregar_id");
 const planilla = document.querySelector(".planilla");
 
 let selasig_container = "";
+let rmv_btn = "";
 let boton, monto, sel_pos_prod, sel_pos_cont, received, received_cnv;
 
 const formatNumber = (num) => {
@@ -272,6 +273,7 @@ tiempo_ref.addEventListener("click", () => {
 // Agregar línea a planilla y campos
 let num = 0;
 let totalItems = 0;
+let ids = 0;
 btn_agregar.addEventListener("click", () => {
   let linea_contrato = {
     produccion: boton,
@@ -279,16 +281,21 @@ btn_agregar.addEventListener("click", () => {
     tiempo: tiempo_ref.value,
     salario: monto,
   };
+
   console.log(`Línea para la planilla ${JSON.stringify(linea_contrato)}`);
 
   const itemPlanilla = document.createElement("tr");
+  itemPlanilla.id = `tr-${ids}`;
   itemPlanilla.className = "seconds";
   itemPlanilla.innerHTML = `<td class="td-uno">${linea_contrato.asignacion}</td>
                                 <td class="td-dos">${linea_contrato.tiempo}</td>
                                 <td class="td-tres">${formatNumber(
                                   linea_contrato.salario
-                                )}</td>`;
+                                )}</td>
+                                <td class="td-cuatro"><button class="rmv-btn"> X </button></td>`;
   planilla.appendChild(itemPlanilla);
+
+  ids++;
 
   num = Number(
     monto
@@ -299,6 +306,18 @@ btn_agregar.addEventListener("click", () => {
       })
   );
   totalItems += num;
+  rmv_btn = document.querySelectorAll(".rmv-btn");
+
+  for (let item of rmv_btn) {
+    //monitor buttons
+    item.addEventListener("click", () => {
+      console.log(`KASHD el botón: ${item.innerHTML}`);
+      console.log("REGEX?");
+      console.log(item.parentNode.parentNode.innerText.split(/\$/)[1]);
+      item.parentNode.parentNode.remove();
+    });
+  }
+
   document.querySelector("#total").innerText = `$ ${formatNumber(
     totalItems.toFixed(2)
   )}`;

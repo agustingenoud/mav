@@ -67,6 +67,15 @@ app.post("/api", async (request, response) => {
         majorDimension: "COLUMNS",
       });
       break;
+    case "Animacion":
+      console.log('Ahora "Animacion" está adentro del case ANIMACION');
+      getRows = await googleSheets.spreadsheets.values.get({
+        auth,
+        spreadsheetId,
+        range: "Convenios!A:H",
+        majorDimension: "COLUMNS",
+      });
+      break;
     case "Agregar":
       console.log('Ahora "agregar" está adentro del case AGREGAR');
       getRows = await googleSheets.spreadsheets.values.get({

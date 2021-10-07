@@ -64,14 +64,16 @@ ul {
   max-height: 300px;
   min-width: 384px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, fr);
   row-gap: 12px;
 }
 
 .planilla {
+  /*
   display: none;
   visibility: hidden;
+  */
   width: 600px;
   min-width: 500px;
   padding-left: 20px;
@@ -81,7 +83,7 @@ ul {
 
 .first {
   display: grid;
-  grid-template-columns: 3fr 2fr 1fr;
+  grid-template-columns: 3fr 2fr 1fr 1fr;
   row-gap: 12px;
   background-color: var(--rosa);
   color: var(--blanco);
@@ -97,7 +99,7 @@ thead {
 
 .seconds {
   display: grid;
-  grid-template-columns: 3fr 2fr 1fr;
+  grid-template-columns: 3fr 2fr 1fr 1fr;
   grid-template-rows: 40px;
   row-gap: 12px;
   background-color: var(--blanco);
@@ -134,9 +136,24 @@ thead {
   justify-content: center;
 }
 
+.td-cuatro {
+  grid-column: 4/5;
+  grid-row: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rmv-btn {
+  width: 50%;
+  height: 56%;
+  padding: 0px;
+  border-radius: 12px;
+}
+
 /* IDs */
 #r-uno {
-  grid-column: 1 / 4;
+  grid-column: 1 / 5;
   grid-row: 1/2;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -160,28 +177,34 @@ thead {
   justify-items: center;
 }
 
+#anim {
+  grid-column: 4 / 5;
+  width: 94%;
+  justify-items: center;
+}
+
 #r-dos {
-  grid-column: 1 / 4;
+  grid-column: 1 / 5;
   grid-row: 2/3;
 }
 
 #r-tres {
-  grid-column: 1 / 4;
+  grid-column: 1 / 5;
   grid-row: 3/4;
 }
 
 #r-cuatro {
-  grid-column: 1 / 4;
+  grid-column: 1 / 5;
   grid-row: 4/5;
 }
 
 #r-cinco {
-  grid-column: 1 / 4;
+  grid-column: 1 / 5;
   grid-row: 5/6;
 }
 
 #agregar {
-  grid-column: 2 / 3;
+  grid-column: 2 / 4;
   grid-row: 7/8;
 }
 
@@ -197,7 +220,7 @@ thead {
 
 #subtotal {
   font-size: 1rem;
-  grid-column: 1/4;
+  grid-column: 1/5;
   grid-row: 6/7;
   border: 1px solid var(--rosa);
   border-radius: 24px;
@@ -207,7 +230,7 @@ thead {
 }
 
 #total-str {
-  grid-column: 2 / 3;
+  grid-column: 2 / 4;
   grid-row: 8/9;
   width: 94%;
   text-align: center;
