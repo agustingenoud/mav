@@ -273,6 +273,8 @@ tiempo_ref.addEventListener("click", () => {
 // Agregar línea a planilla y campos
 let num = 0;
 let totalItems = 0;
+console.log(`tot0-276: ${totalItems}`);
+
 let ids = 0;
 btn_agregar.addEventListener("click", () => {
   let linea_contrato = {
@@ -292,7 +294,7 @@ btn_agregar.addEventListener("click", () => {
                                 <td class="td-tres">${formatNumber(
                                   linea_contrato.salario
                                 )}</td>
-                                <td class="td-cuatro"><button class="rmv-btn"> X </button></td>`;
+                                <td class="td-cuatro"><button class="rmv-btn" onclick="remover(this)"> X </button></td>`;
   planilla.appendChild(itemPlanilla);
 
   ids++;
@@ -305,20 +307,36 @@ btn_agregar.addEventListener("click", () => {
         return m == "," ? "" : "";
       })
   );
-  totalItems += num;
-  rmv_btn = document.querySelectorAll(".rmv-btn");
 
-  for (let item of rmv_btn) {
-    //monitor buttons
-    item.addEventListener("click", () => {
-      console.log(`KASHD el botón: ${item.innerHTML}`);
-      console.log("REGEX?");
-      console.log(item.parentNode.parentNode.innerText.split(/\$/)[1]);
-      item.parentNode.parentNode.remove();
-    });
-  }
+  totalItems += num;
+  console.log(`tot1-312: ${totalItems}`);
+
+  rmv_btn = document.querySelectorAll(".rmv-btn");
 
   document.querySelector("#total").innerText = `$ ${formatNumber(
     totalItems.toFixed(2)
   )}`;
+  console.log(`tot4-348: ${totalItems}`);
 });
+
+function remover(item) {
+  console.log("remover is ON");
+  let numRest = 0;
+  numRest = item.parentNode.parentNode.innerText
+    .split(/\$ /)[1]
+    .split(/\n/)[0]
+    .trim();
+  console.log(`numrest: ${numRest}`);
+  console.log(`NUM: ${numRest}`);
+  console.log(`NUM type: ${typeof numRest}`);
+  numRest = numRest.replace(/\,/, "");
+  console.log(`NUM post replace: ${numRest}`);
+  numRest = Number(numRest);
+  totalItems -= numRest;
+  console.log(`tot2-332: ${totalItems}`);
+  document.querySelector("#total").innerText = `$ ${formatNumber(
+    totalItems.toFixed(2)
+  )}`;
+  console.log(`tot3-338: ${totalItems}`);
+  item.parentNode.parentNode.remove();
+}
