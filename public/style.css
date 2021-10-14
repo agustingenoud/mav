@@ -13,7 +13,7 @@
   --gris: #7a7a7a;
   --gris-oscuro: #2b2b2b;
   --blanco: #f2f2f2;
-  /*--rosa: #e21683;*/
+  --rosa-rosa: #e21683;
   --rosa: #3d17e0;
   --violeta: #a2007d;
 }
@@ -28,6 +28,7 @@ body {
 /* ELEMENTS */
 main {
   display: flex;
+  flex-direction: column;
 }
 button {
   border: 1px solid var(--rosa); /* Green */
@@ -58,14 +59,17 @@ ul {
   list-style-type: none;
 }
 
+td {
+  font-weight: bold;
+}
+
 /* CLASSES */
 .container-cotizador {
-  width: 424px;
-  max-height: 300px;
+  width: 666px;
   min-width: 384px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, fr);
+  grid-template-rows: repeat(10, 50px);
   row-gap: 12px;
 }
 
@@ -74,18 +78,20 @@ ul {
   display: none;
   visibility: hidden;
   */
-  width: 600px;
-  min-width: 500px;
+  /* width: 600px;
+  min-width: 500px; */
   padding-left: 20px;
   margin: 16px 0px;
   font-weight: lighter;
+  width: 666px;
 }
 
 .first {
+  visibility: hidden;
   display: grid;
   grid-template-columns: 3fr 2fr 1fr 1fr;
   row-gap: 12px;
-  background-color: var(--rosa);
+  background-color: var(--rosa-rosa);
   color: var(--blanco);
   height: 40px;
   text-align: center;
@@ -99,7 +105,7 @@ thead {
 
 .seconds {
   display: grid;
-  grid-template-columns: 3fr 2fr 1fr 1fr;
+  grid-template-columns: 4fr 2fr 1.5fr 1fr;
   grid-template-rows: 40px;
   row-gap: 12px;
   background-color: var(--blanco);
@@ -109,7 +115,6 @@ thead {
   vertical-align: middle;
   padding: 6px 0px;
   margin: 4px 0px;
-  border-bottom: 1px solid var(--gris);
 }
 
 .td-uno {
@@ -149,6 +154,8 @@ thead {
   height: 56%;
   padding: 0px;
   border-radius: 12px;
+  color: var(--rosa-rosa);
+  border-color: var(--rosa-rosa);
 }
 
 /* IDs */
@@ -156,7 +163,7 @@ thead {
   grid-column: 1 / 5;
   grid-row: 1/2;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 #tv {
@@ -227,6 +234,7 @@ thead {
   padding: 6px;
   padding-left: 24px;
   margin: 4px 0px;
+  text-align: center;
 }
 
 #total-str {
@@ -235,6 +243,7 @@ thead {
   width: 94%;
   text-align: center;
   padding-top: 1rem;
+  font-size: 1.2rem;
 }
 
 #total {
@@ -245,6 +254,7 @@ thead {
   border-radius: 24px;
   padding: 6px;
   margin: 4px 0px;
+  text-align: center;
 }
 
 /*
