@@ -51,10 +51,11 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   background: transparent;
-  background-image: url("../imgs/arrow.svg");
+  background-image: url("https://www.mercadoaudiovisual.com.ar/app-imgs/arrow.svg");
+  background-size: 5%;
   background-repeat: no-repeat;
-  background-position-x: 100%;
-  background-position-y: 5px;
+  background-position-x: 95%;
+  background-position-y: 50%;
   border: 1px solid var(--rosa);
   color: var(--rosa);
   padding-left: 6%;
@@ -71,7 +72,7 @@ ul {
 }
 
 td {
-  font-weight: bold;
+  font-weight: normal;
 }
 
 /* CLASSES */
@@ -80,7 +81,7 @@ td {
   min-width: 384px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(10, 60px);
+  grid-template-rows: repeat(7, 60px) 20px repeat(2, 60px);
   row-gap: 12px;
 }
 
@@ -94,7 +95,7 @@ td {
   padding-left: 20px;
   margin: 16px 0px;
   font-weight: lighter;
-  width: 666px;
+  width: 888px;
 }
 
 .first {
@@ -116,7 +117,7 @@ thead {
 
 .seconds {
   display: grid;
-  grid-template-columns: 4fr 2fr 1.5fr 1fr;
+  grid-template-columns: 5% 50% 20% 20% 5%;
   grid-template-rows: 40px;
   row-gap: 12px;
   background-color: var(--blanco);
@@ -141,7 +142,8 @@ thead {
   grid-row: 1/1;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-left: 3%;
 }
 
 .td-tres {
@@ -149,7 +151,7 @@ thead {
   grid-row: 1/1;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: right;
 }
 
 .td-cuatro {
@@ -157,7 +159,7 @@ thead {
   grid-row: 1/1;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
 }
 
 .rmv-btn {
@@ -245,6 +247,7 @@ thead {
   border-radius: 24px;
   padding: 6px;
   padding-left: 24px;
+  padding-top: 16px;
   margin: 4px 0px;
   text-align: center;
 }
@@ -255,16 +258,19 @@ thead {
   width: 94%;
   text-align: center;
   padding-top: 1rem;
+  padding-left: 20px;
   font-size: 1.2rem;
 }
 
 #total {
-  font-size: 1.6rem;
+  font-size: 2rem;
+  font-weight: bolder;
   grid-column: 2/4;
   grid-row: 9/10;
   border: 0px solid var(--rosa);
   border-radius: 24px;
   padding: 6px;
+  padding-top: 12px;
   margin: 4px 0px;
   text-align: center;
 }
@@ -277,3 +283,11 @@ thead {
   color: var(--gris);
 }
 */
+
+#sel_produccion_id,
+#sel_cont_id,
+#sel_asignacion_id,
+#sel_tiempo_id {
+  color: var(--negro);
+  border-color: var(--negro);
+}
