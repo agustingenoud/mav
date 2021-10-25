@@ -276,16 +276,19 @@ let totalItems = 0;
 console.log(`tot0-276: ${totalItems}`);
 
 let ids = 0;
+
 btn_agregar.addEventListener("click", () => {
   let linea_contrato = {
     produccion: boton,
     asignacion: asig_ref.value,
     tiempo: tiempo_ref.value,
     salario: monto,
+    cantidadItem: 1,
   };
 
   console.log(`Línea para la planilla ${JSON.stringify(linea_contrato)}`);
 
+  // Create element para el HTML
   const itemPlanilla = document.createElement("tr");
   itemPlanilla.id = `tr-${ids}`;
   itemPlanilla.className = "seconds";
@@ -297,7 +300,14 @@ btn_agregar.addEventListener("click", () => {
                                 <td class="td-cuatro"> | &ensp; ${formatNumber(
                                   linea_contrato.salario
                                 )}</td>
-                                <td class="td-cinco"><button class="rmv-btn" onclick="remover(this)"> X </button></td>`;
+                                <td class="td-cinco">
+                                  <button class="restar" onclick="restar(this)"> - </button>
+                                  <p class="cantItemsNum"> ${
+                                    linea_contrato.cantidadItem
+                                  } </p>
+                                  <button class="sumar" onclick="sumar(this)"> + </button>
+                                </td>
+                                <td class="td-seis"><button class="rmv-btn" onclick="remover(this)"> (x) Eliminar </button></td>`;
   planilla.appendChild(itemPlanilla);
 
   ids++;
@@ -324,22 +334,57 @@ btn_agregar.addEventListener("click", () => {
 
 function remover(item) {
   console.log("remover is ON");
-  let numRest = 0;
-  numRest = item.parentNode.parentNode.innerText
-    .split(/\$ /)[1]
-    .split(/\n/)[0]
-    .trim();
-  console.log(`numrest: ${numRest}`);
-  console.log(`NUM: ${numRest}`);
-  console.log(`NUM type: ${typeof numRest}`);
+  let linea = item.parentNode.parentNode.innerText;
+  let numRest = linea.split(/\$ /)[1].split(/\n/)[0].trim();
+  let itemCant = linea.split(/\-/)[1].split(/\+/)[0].trim();
+
   numRest = numRest.replace(/\,/, "");
-  console.log(`NUM post replace: ${numRest}`);
   numRest = Number(numRest);
-  totalItems -= numRest;
-  console.log(`tot2-332: ${totalItems}`);
+  itemCant = Number(itemCant);
+
+  totalItems -= numRest * itemCant;
+
   document.querySelector("#total").innerText = `$ ${formatNumber(
     totalItems.toFixed(2)
   )}`;
-  console.log(`tot3-338: ${totalItems}`);
   item.parentNode.parentNode.remove();
+}
+
+function sumar(item) {
+  let linea = item.parentNode.parentNode.innerText;
+  let itemMonto = linea.split(/\$ /)[1].split(/\n/)[0].trim();
+  let itemCant = linea.split(/\-/)[1].split(/\+/)[0].trim();
+
+  console.log(`ITEM MONTO > ${itemMonto} | ITEM CANT > ${itemCant}`);
+
+  itemMonto = itemMonto.replace(/\,/, "");
+  itemMonto = Number(itemMonto);
+  totalItems += itemMonto;
+  document.querySelector("#total").innerText = `$ ${formatNumber(
+    totalItems.toFixed(2)
+  )}`;
+  item.parentNode.childNodes[3].innerText =
+    parseInt(item.parentNode.childNodes[3].innerText) + 1;
+  //regex > (?<=\-)  [0-9]{1,2}  (?=\+)
+}
+
+function restar(item) {
+  let linea = item.parentNode.parentNode.innerText;
+  let itemMonto = linea.split(/\$ /)[1].split(/\n/)[0].trim();
+  let itemCant = linea.split(/\-/)[1].split(/\+/)[0].trim();
+  itemCant = Number(itemCant);
+  if (itemCant <= 1) {
+    return;
+  }
+  console.log(`ITEM MONTO > ${itemMonto} | ITEM CANT > ${itemCant}`);
+
+  itemMonto = itemMonto.replace(/\,/, "");
+  itemMonto = Number(itemMonto);
+  totalItems -= itemMonto;
+  document.querySelector("#total").innerText = `$ ${formatNumber(
+    totalItems.toFixed(2)
+  )}`;
+  item.parentNode.childNodes[3].innerText =
+    parseInt(item.parentNode.childNodes[3].innerText) - 1;
+  //regex > (?<=\-)  [0-9]{1,2}  (?=\+)
 }
