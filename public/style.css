@@ -30,8 +30,10 @@ main {
   display: flex;
   flex-direction: column;
 }
-button {
-  border: 1px solid var(--rosa); /* Green */
+
+/* ----------------- Botones */
+button.rubro {
+  border: 1px solid var(--rosa);
   color: var(--rosa);
   padding: 12px;
   margin: 4px 0px;
@@ -41,10 +43,52 @@ button {
   transition-duration: 0.326s;
 }
 
-button:focus {
+button.rubro:focus {
   background-color: var(--rosa);
   color: var(--blanco);
   height: 90%;
+}
+
+button#btn_agregar_id {
+  border: 1px solid var(--rosa);
+  color: var(--rosa);
+  padding: 12px;
+  margin: 4px 0px;
+  width: 100%;
+  height: 90%;
+  border-radius: 24px;
+  transition-duration: 0.326s;
+}
+
+button#btn_agregar_id:focus {
+  background-color: var(--rosa);
+  color: var(--blanco);
+  height: 90%;
+}
+
+.rmv-btn {
+  padding: 0px;
+  margin: 0px;
+  border: hidden;
+  color: var(--rosa-rosa);
+  background-color: var(--blanco);
+}
+
+button.sumar,
+button.restar {
+  padding: 0px;
+  margin: 0px;
+  color: var(--negro);
+  border-color: var(--negro);
+  width: 20%;
+  height: 60%;
+  border-radius: 24px;
+  border: 1px solid var(--negro);
+}
+
+button.sumar:focus,
+button.restar:focus {
+  color: var(--negro);
 }
 
 select {
@@ -172,24 +216,6 @@ thead {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-}
-
-.rmv-btn {
-  padding: 0px;
-  margin: 0px;
-  border: hidden;
-  color: var(--rosa-rosa);
-  background-color: var(--blanco);
-}
-
-.sumar,
-.restar {
-  padding: 0px;
-  margin: 0px;
-  color: var(--negro);
-  border-color: var(--negro);
-  width: 20%;
-  height: 60%;
 }
 
 /* IDs */
