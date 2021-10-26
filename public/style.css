@@ -50,8 +50,8 @@ button.rubro:focus {
 }
 
 button#btn_agregar_id {
-  border: 1px solid var(--rosa);
-  color: var(--rosa);
+  background-color: var(--rosa);
+  color: var(--blanco);
   padding: 12px;
   margin: 4px 0px;
   width: 100%;
@@ -61,9 +61,28 @@ button#btn_agregar_id {
 }
 
 button#btn_agregar_id:focus {
-  background-color: var(--rosa);
-  color: var(--blanco);
+  border: 1px solid var(--rosa);
+  color: var(--rosa);
+  background-color: var(--blanco);
+
   height: 90%;
+}
+
+button#descargar {
+  background-color: var(--rosa-rosa);
+  color: var(--blanco);
+  padding: 12px;
+  margin: 4px 0px;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  transition-duration: 0.326s;
+}
+
+button#descargar:focus {
+  border: 1px solid var(--rosa-rosa);
+  color: var(--rosa-rosa);
+  background-color: var(--blanco);
 }
 
 .rmv-btn {
@@ -131,6 +150,8 @@ td {
 }
 
 .planilla {
+  display: flex;
+  flex-direction: column-reverse;
   padding-left: 20px;
   margin: 16px 0px;
   font-weight: lighter;
@@ -155,6 +176,12 @@ thead {
   height: 40px;
 }
 
+tbody {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.6rem;
+}
+
 .seconds {
   display: grid;
   grid-template-columns: 5% 40% 15% 13% 15% 12%;
@@ -167,6 +194,10 @@ thead {
   vertical-align: middle;
   padding: 6px 0px;
   margin: 4px 0px;
+}
+
+.last {
+  width: 100px;
 }
 
 .td-uno {
