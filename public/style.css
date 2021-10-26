@@ -72,9 +72,9 @@ button#descargar {
   background-color: var(--rosa-rosa);
   color: var(--blanco);
   padding: 12px;
-  margin: 4px 0px;
-  width: 100%;
-  height: 100%;
+  margin: 28px 0px;
+  width: 300px;
+  height: 60%;
   border-radius: 24px;
   transition-duration: 0.326s;
 }
@@ -138,6 +138,11 @@ td {
   font-weight: normal;
 }
 
+tr {
+  display: flex;
+  justify-content: center;
+}
+
 /* CLASSES */
 .container-cotizador {
   width: 666px;
@@ -178,10 +183,14 @@ thead {
 
 tbody {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin-top: 1.6rem;
 }
-
+td {
+  display: flex;
+  justify-content: center;
+}
 .seconds {
   display: grid;
   grid-template-columns: 5% 40% 15% 13% 15% 12%;
@@ -353,6 +362,15 @@ tbody {
   text-align: center;
 }
 
+#total-dos {
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid var(--rosa-rosa);
+  border-radius: 24px;
+  color: var(--rosa-rosa);
+  width: 60%;
+  height: 50px;
+}
 /*
 #prod-head,
 #cont-head,

@@ -329,6 +329,10 @@ btn_agregar.addEventListener("click", () => {
   document.querySelector("#total").innerText = `$ ${formatNumber(
     totalItems.toFixed(2)
   )}`;
+
+  document.querySelector("#total-dos-span").innerText = `$ ${formatNumber(
+    totalItems.toFixed(2)
+  )}`;
   console.log(`tot4-348: ${totalItems}`);
 });
 
@@ -347,6 +351,9 @@ function remover(item) {
   document.querySelector("#total").innerText = `$ ${formatNumber(
     totalItems.toFixed(2)
   )}`;
+  document.querySelector("#total-dos-span").innerText = `$ ${formatNumber(
+    totalItems.toFixed(2)
+  )}`;
   item.parentNode.parentNode.remove();
 }
 
@@ -360,9 +367,14 @@ function sumar(item) {
   itemMonto = itemMonto.replace(/\,/, "");
   itemMonto = Number(itemMonto);
   totalItems += itemMonto;
+
   document.querySelector("#total").innerText = `$ ${formatNumber(
     totalItems.toFixed(2)
   )}`;
+  document.querySelector("#total-dos-span").innerText = `$ ${formatNumber(
+    totalItems.toFixed(2)
+  )}`;
+
   item.parentNode.childNodes[3].innerText =
     parseInt(item.parentNode.childNodes[3].innerText) + 1;
   //regex > (?<=\-)  [0-9]{1,2}  (?=\+)
@@ -381,9 +393,14 @@ function restar(item) {
   itemMonto = itemMonto.replace(/\,/, "");
   itemMonto = Number(itemMonto);
   totalItems -= itemMonto;
+
   document.querySelector("#total").innerText = `$ ${formatNumber(
     totalItems.toFixed(2)
   )}`;
+  document.querySelector("#total-dos-span").innerText = `$ ${formatNumber(
+    totalItems.toFixed(2)
+  )}`;
+
   item.parentNode.childNodes[3].innerText =
     parseInt(item.parentNode.childNodes[3].innerText) - 1;
   //regex > (?<=\-)  [0-9]{1,2}  (?=\+)
