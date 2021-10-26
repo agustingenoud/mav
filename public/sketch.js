@@ -1,12 +1,10 @@
 "use strict";
-
+// *init*
 const btns = document.querySelectorAll(".rubro");
-
 const prod_ref = document.querySelector("#sel_produccion_id");
 const cont_ref = document.querySelector("#sel_cont_id");
 const asig_ref = document.querySelector("#sel_asignacion_id");
 const tiempo_ref = document.querySelector("#sel_tiempo_id");
-
 const btn_agregar = document.querySelector("#btn_agregar_id");
 const planilla = document.querySelector(".planilla");
 
@@ -14,6 +12,7 @@ let selasig_container = "";
 let rmv_btn = "";
 let boton, monto, sel_pos_prod, sel_pos_cont, received, received_cnv;
 
+// *funcs*
 const formatNumber = (num) => {
   return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
 };
@@ -28,6 +27,7 @@ const findPositions = (first, second) => {
   return indicies;
 };
 
+// *soft*
 for (let item of btns) {
   //monitor buttons
   item.addEventListener("click", async () => {
@@ -61,7 +61,7 @@ for (let item of btns) {
 
     const input_json = await response.json(); // RECEIVE-api */
     received = input_json.data.values;
-    //console.log(received);
+    console.log(received);
 
     // Asignacion menu producciones
     let selected = [];
