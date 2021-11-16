@@ -297,7 +297,7 @@ btn_agregar.addEventListener("click", () => {
   const itemPlanilla = document.createElement("tr");
   itemPlanilla.id = `tr-${ids}`;
   itemPlanilla.className = "seconds";
-  itemPlanilla.innerHTML = `<td class="td-uno"><img src="https://www.mercadoaudiovisual.com.ar/app-imgs/tilde.svg"></td>
+  itemPlanilla.innerHTML = `<td class="td-uno"><img class="ok-img" src="https://www.mercadoaudiovisual.com.ar/app-imgs/tilde.svg"></td>
                             <td class="td-dos">${linea_contrato.asignacion}</td>
                                 <td class="td-tres">/ ${
                                   linea_contrato.tiempo
