@@ -30,6 +30,7 @@ const findPositions = (first, second) => {
 // *soft*
 for (let item of btns) {
   //monitor buttons
+
   item.addEventListener("click", async () => {
     console.log(`Apretaste el botón: ${item.innerHTML}`);
     boton = item.innerHTML;
@@ -115,7 +116,8 @@ for (let item of btns) {
 } // Fin for(let item of btns)
 
 //Seleccion Producción
-prod_ref.addEventListener("click", () => {
+//prod_ref.addEventListener("click", () => {
+prod_ref.addEventListener("change", () => {
   console.log(`CLICK en PROD! con el valor ${prod_ref.value}`);
   let prod_seleccion = prod_ref.value;
   cont_ref.options.length = 0; // Limpio campo inferior
@@ -146,7 +148,8 @@ prod_ref.addEventListener("click", () => {
 });
 
 // Seleccion cont
-cont_ref.addEventListener("click", async () => {
+//cont_ref.addEventListener("click", async () => {
+cont_ref.addEventListener("change", async () => {
   console.log(`CLICK en cont! con el valor ${cont_ref.value}`);
 
   asig_ref.options.length = 0; // Limpio campo inferior
@@ -226,7 +229,8 @@ cont_ref.addEventListener("click", async () => {
   console.log(sel_pos_cont); */
 });
 
-asig_ref.addEventListener("click", async () => {
+//asig_ref.addEventListener("click", async () => {
+asig_ref.addEventListener("change", async () => {
   console.log("click en asig_ref");
 
   // revisar
@@ -259,7 +263,8 @@ asig_ref.addEventListener("click", async () => {
   }
 });
 
-tiempo_ref.addEventListener("click", () => {
+//tiempo_ref.addEventListener("click", () => {
+tiempo_ref.addEventListener("change", () => {
   let ind = sel_pos_cont[tiempo_ref.selectedIndex - 1];
   monto = received_cnv[3][ind];
   console.log(`received_cnv[3][ind]: ${received_cnv[3][ind]}`);
