@@ -1,5 +1,6 @@
 "use strict";
 // *init*
+//import print from "print-js";
 const btns = document.querySelectorAll(".rubro");
 const prod_ref = document.querySelector("#sel_produccion_id");
 const cont_ref = document.querySelector("#sel_cont_id");
